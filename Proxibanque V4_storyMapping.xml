@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<map uid="2A4vJW" name="Proxibanque V4" ownerName="MehdiColbert" cleanName="Proxibanque-V4" groupsLabel="Groups" listsLabel="Lists" layersLabel="Layers">
+  <card uid="qT-bYq" id="1" role="GroupHeader" index="0" title="Fonctionnalités Conseiller" />
+  <card uid="8TUKQy" id="2" role="ListHeader" parentCardId="4" index="0" title="Gestion Agence" />
+  <card uid="d5KI_x" id="3" role="ListHeader" parentCardId="1" index="1" title="Sessions Conseiller" />
+  <card uid="9hJ2Ck" id="4" role="GroupHeader" index="1" title="Fonctionnalités Gérant" />
+  <card uid="xqlE75" id="5" role="ListHeader" parentCardId="1" index="0" title="Gestion Clients" />
+  <card uid="toqTKX" id="6" role="LayerHeader" index="0" title="Release 1 : mvp" />
+  <card uid="y1A3-_" id="7" role="ListItem" parentCardId="2" otherParentCardId="26" index="0" title="Réalisation audit" color="green" />
+  <card uid="p75K0-" id="8" role="ListItem" parentCardId="3" otherParentCardId="6" index="0" title="Authentification/Deconexion" color="green" />
+  <card uid="8fiJNH" id="10" role="ListHeader" parentCardId="1" index="3" title="Gestion Comptes" />
+  <card uid="Q35UK1" id="12" role="ListItem" parentCardId="5" otherParentCardId="6" index="1" title="Création client" color="yellow" />
+  <card uid="LZ3rYQ" id="13" role="ListItem" parentCardId="5" otherParentCardId="26" index="0" title="Afficher infos client" color="orange" />
+  <card uid="N5s461" id="14" role="ListItem" parentCardId="5" otherParentCardId="26" index="1" title="Modifier client" color="orange" />
+  <card uid="tQSObO" id="15" role="ListItem" parentCardId="5" otherParentCardId="6" index="2" title="Supprimer client" color="yellow" />
+  <card uid="FWN-Yw" id="17" role="ListItem" parentCardId="10" otherParentCardId="6" index="1" title="Supprimer compte" color="yellow" />
+  <card uid="XwrMQz" id="18" role="ListItem" parentCardId="10" otherParentCardId="6" index="2" title="Simulation crédit" color="yellow" />
+  <card uid="UOwTch" id="19" role="ListItem" parentCardId="10" otherParentCardId="26" index="0" title="Gestion du patrimoin" color="orange" />
+  <card uid="F0fKWn" id="20" role="ListHeader" parentCardId="1" index="2" title="Transactions" />
+  <card uid="fb7A4G" id="21" role="ListItem" parentCardId="20" otherParentCardId="6" index="0" title="Crédit / débit" color="yellow" />
+  <card uid="GpB7_A" id="22" role="ListItem" parentCardId="20" otherParentCardId="6" index="1" title="Effectuer un virement" color="yellow" />
+  <card uid="qVW0hC" id="23" role="ListItem" parentCardId="10" otherParentCardId="6" index="0" title="Créer compte" color="green" />
+  <card uid="fsuSFP" id="25" role="ListItem" parentCardId="5" otherParentCardId="6" index="0" title="Afficher liste clients" color="green" />
+  <card uid="UGWMzq" id="26" role="LayerHeader" index="1" title="Release" />
+</map>
