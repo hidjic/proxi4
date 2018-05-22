@@ -1,0 +1,322 @@
+html, body {
+	background-image: url(/ClientProxiBanque/resources/img/bg4.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+/* 	min-height: 100vh; */
+	margin: 0px;
+}
+
+.header {
+	background-color: rgba(25, 25, 25);
+	text-align: center;
+	position: relative;
+	left: 20%;
+	max-width: 60%;
+	min-height: 13%;
+	color: rgba(253, 213, 79);
+	font-family: "Times New Roman", Times, serif;
+	font-size: 80px;
+	font-style: oblique;
+	line-height: 120px;
+	margin: 0;
+}
+
+.footer {
+	background-color: rgba(25, 25, 25);
+	text-align: center;
+	position: relative;
+	left: 20%;
+	max-width: 60%;
+	padding-top: 5px;
+	height: 5%;
+	text-align: right;
+	color: white;
+	font-size: xx-small;
+}
+
+.container {
+	background-color: rgba(255, 255, 255, 0.9);
+	text-align: center;
+	min-width: 60%;
+	max-width: 60%;
+	margin-right: 20%;
+	margin-left: 20%;
+	min-height: 90vh;
+	max-height: 150vh;
+}
+
+/* NavBar */
+.navBar {
+	max-width: 70%;
+	margin-right: 20%;
+	margin-left: 20%;
+	margin-bottom: 0%;
+	position: relative;
+	top: 20%;
+	height: 5%;
+	font-size: 25px;
+}
+
+.bouttonNavBar {
+	color: white;
+	font-size: 25px;
+}
+
+/* login page */
+.divLogin {
+	text-align: center;
+	max-width: 70%;
+	margin-right: 20%;
+	margin-left: 20%;
+	height: 100vh;
+}
+
+.placementFormulaire {
+	max-width: 50%;
+	min-height: 30%;
+	padding: 6%;
+	position: relative;
+	left: 20%;
+	top: 10vh;
+	display: block;
+}
+
+/* custommerList page */
+.imgOverdraft span {
+	display: none;
+}
+
+.imgOverdraft:hover span {
+	display: inline;
+	position: absolute;
+	margin-top: 25px;
+	width: 200px;
+	border: 1px solid #009900;
+	background: #ffffff;
+	text-align: center;
+	color: #ff0000;
+}
+
+.placementListeCLient {
+	max-width: 150%;
+	min-width: 90%;
+	position: relative;
+	left: 3%;
+	top: 5vh;
+	font-size: medium;
+}
+
+.ui-button.bouttoncreate {
+	margin-right: 20px;
+	margin-top: 5px;
+	float: right;
+	border: 2px solid red;
+	border-radius: 12px;
+}
+
+.ui-button.bouttonUpdate {
+	background: none;
+	float: middle;
+	background-color: rgba(124, 137, 94);
+	color: white;
+}
+
+.ui-button.bouttonGet {
+	background: none;
+	float: middle;
+	background-color: rgba(82, 99, 63);
+	color: white;
+}
+
+.ui-button.bouttonVirement {
+	background: none;
+	float: middle;
+	background-color: rgba(53, 71, 47);
+	color: white;
+}
+
+.rowSeparate {
+	background-color: rgba(53, 71, 47);
+}
+
+/* creation client page */
+.bouttonEnregistrer {
+	float: middle;
+	background-color: deepskyblue;
+	color: black;
+}
+
+/* ==================== accountList page ============================ */
+.infoClient {
+	text-align: left;
+	padding-top: 6%;
+	padding-bottom: 6%;
+}
+
+.my-dialogs{
+	 margin-top: 65px;
+	 position:absolute
+}
+
+.placementInfosClient {
+	max-width: 150%;
+	min-width: 70%;
+	position: relative;
+	left: 13%;
+	top: 5vh;
+}
+
+.cellule {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+	font-weight: bold;
+	font-size: 25px;
+	text-align: left;
+	font-weight: bold;
+	font-size: 25px;
+	max-height: 5%;
+}
+
+.celluleTitre {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 30px;
+	font-weight: bold;
+	font-size: 35px;
+	max-height: 5%;
+}
+
+.celluleSmall {
+	font-weight: bold;
+	font-size: 25px;
+	height: 25px;
+}
+
+.celluleInactive {
+	background: none;
+	background: rgba(200, 200, 200, 0.5);
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(50, 50, 50);
+}
+
+.celluleSmallInactive {
+	background: none;
+	background: rgba(200, 200, 200, 0.5);
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 25px;
+	height: 25px;
+	color: rgba(50, 50, 50);
+}
+
+.alerteText {
+	color: red;
+	font-size: 35px;
+	font-style: oblique;
+}
+
+.standardText {
+	
+}
+
+.compteCourant {
+	text-align: left;
+	max-width: 20%;
+	min-height: 80%;
+	border: 2px solid black;
+	border-radius: 20px;
+	padding-bottom: 6%;
+	position: relative;
+	left: 60%;
+	top: 5vh;
+	display: block;
+}
+
+.compteEpargne {
+	text-align: left;
+	max-width: 20%;
+	min-height: 80%;
+	border: 2px solid black;
+	border-radius: 20px;
+	padding-bottom: 6%;
+	position: relative;
+	left: 60%;
+	top: 30vh;
+	display: block;
+}
+
+.bouttonCredit {
+	float: left;
+	background-color: rgba(189, 245, 200);
+	color: black;
+}
+
+.bouttonDebit {
+	float: right;
+	background-color: rgba(255, 175, 70);
+	color: black;
+}
+
+.ui-button.bouttonActiver {
+	/* 	background: none; */
+	float: middle;
+	/* 	background-color: rgba(82, 99, 63); */
+	color: black;
+}
+
+.ui-menubutton.bouttonTransaction2 {
+	background: none;
+	float: middle;
+	background-color: rgba(82, 99, 63);
+	color: white;
+}
+
+.ui-button.bouttonUpdate2 {
+	background: none;
+	background-color: rgba(124, 137, 94);
+	float: right;
+	color: white;
+	margin: 10px;
+}
+
+.bouttonCreate2 {
+	text-align: center;
+	background-color: deepskyblue;
+	color: black;
+}
+
+/* debitCompte page */
+.formulaireDebit {
+	max-width: 45%;
+	min-height: 30%;
+	border: 2px solid black;
+	border-radius: 20px;
+	padding: 6%;
+	position: relative;
+	left: 30%;
+	top: 10vh;
+}
+
+.bouttonValider {
+	margin-top: 20px;
+	float: middle;
+	background-color: rgba(105, 105, 105);
+	color: white;
+	font-size: large;
+}
+
+/* Page Virement compte à compte */
+.placementTransaction {
+	max-width: 150%;
+	min-width: 70%;
+	position: relative;
+	left: 13%;
+	top: 5vh;
+	font-size: medium;
+}

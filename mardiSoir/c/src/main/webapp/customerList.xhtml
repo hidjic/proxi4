@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Home</title>
+</h:head>
+<h:body>
+	<f:view>
+		<ui:composition template="templates/common.xhtml">
+			<ui:define name="content">
+				<div class="container">
+					<h:form>
+
+						<p:outputLabel style="	font-size: 60px; line-height: 90px;"
+							value="Bienvenue : #{employebean.employe.name} #{employebean.employe.firstName}"></p:outputLabel>
+						<Br />
+						<div></div>
+						<Br />
+						<div Style="margin: 30px">
+							<p:dataTable value="#{employebean.employe.listCustomer}"
+								var="item" tableStyle="table-layout: auto;" style="font-size: 25px">
+								
+								<f:facet name="header">
+									<p:outputLabel style="	font-size: 35px; line-height: 65px;"
+										value="Voici la liste de vos clients"></p:outputLabel>
+
+									<p:commandButton styleClass="bouttoncreate"
+										value="Créer un nouveau client" action="#{customerbean.goCreateCustomerPage}"
+										icon="ui-icon-pencil" />
+								</f:facet>
+								
+								<p:column>
+								<p class="imgOverdraft">
+									<h:graphicImage  value="resources/img/danger.png" alt=""
+										rendered="#{(item.mySavingAccount.balance lt employebean.savingAccountLimit) || (item.myCurrentAccount.balance lt item.myCurrentAccount.overdraft)}" />
+								<span >compte(s) à découvert</span>
+								</p>
+								</p:column>
+
+								<p:column filterBy="#{item.name}">
+									<f:facet name="header">
+										<h:outputText value="Nom" />
+									</f:facet>
+									<h:outputText value="#{item.name}" />
+								</p:column>
+
+								<p:column filterBy="#{item.firstName}">
+									<f:facet name="header">
+
+										<h:outputText value="Prénom" />
+									</f:facet>
+									<h:outputText value="#{item.firstName}" />
+								</p:column>
+
+								<p:column filterBy="#{item.email}">
+									<f:facet name="header">
+										<h:outputText value="email" />
+									</f:facet>
+									<h:outputText value="#{item.email}" />
+								</p:column>
+
+
+								<p:column>
+									<f:facet name="header">
+										<h:outputText value="Modifier infos client" />
+									</f:facet>
+									<p:commandButton styleClass="bouttonUpdate"
+										value="Editer" action="#{customerbean.goUpdateCustomer(item)}"
+										icon="ui-icon-arrowrefresh-1-w" />
+								</p:column>
+
+								<p:column>
+									<f:facet name="header">
+										<h:outputText value=" Détail comptes" />
+									</f:facet>
+									<p:commandButton value="Comptes"
+										styleClass="bouttonGet" action="#{customerbean.goAccountsList(item)}" icon="ui-icon-document" />
+								</p:column>
+
+								<p:column>
+									<f:facet name="header">
+										<h:outputText value="Transaction" />
+									</f:facet>
+									<p:commandButton styleClass="bouttonVirement"
+										action="#{customerbean.goTransfert(item)}"
+										value="Virement" icon="ui-icon-gear" />
+								</p:column>
+							</p:dataTable>
+						</div>
+					</h:form>
+				</div>
+			</ui:define>
+		</ui:composition>
+	</f:view>
+</h:body>
+
+</html>
