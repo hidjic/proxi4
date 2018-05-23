@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Home</title>
+</h:head>
+<h:body>
+
+
+	<f:view>
+		<ui:composition template="templates/commonManager.xhtml">
+			<ui:define name="content">
+				<div class="container">
+
+					<h:form>
+						<p:panelGrid class="placementListeCLient" style="font-size: 15px">
+
+							<p:row>
+								<p:column colspan="4">
+									<p style="font-size: 40px">Veuillez entrer les informations
+										du nouveau conseiller</p>
+								</p:column>
+							</p:row>
+
+							<p:row>
+								<p:column colspan="4" styleClass="ui-widget-header">
+									Nouvelle identité du client
+								</p:column>
+							</p:row>
+
+							<p:row>
+								<p:column>
+									<p:outputLabel for="nom" value="Nom : "></p:outputLabel>
+								</p:column>
+								<p:column>
+									<p:inputText id="nom" value="#"
+										required="true" label="nom">
+										<f:validateLength minimum="2" />
+										<p:ajax update="forName" event="keyup" />
+									</p:inputText>
+									<p:message for="nom" id="forName" display="icon" />
+								</p:column>
+
+								<p:column> Prenom : </p:column>
+								<p:column>
+									<p:inputText id="prenom"
+										value="#" required="true"
+										label="firstName">
+										<f:validateLength minimum="2" />
+										<p:ajax update="forFistname" event="keyup" />
+									</p:inputText>
+									<p:message for="prenom" id="forFistname" display="icon" />
+								</p:column>
+							</p:row>
+
+							
+							<f:facet name="footer">
+								<p:row>
+									<p:column colspan="4" style="text-align: center">
+										<p:commandButton value="Confirmer">
+											<p:confirm header="Confirmation"
+												message="Valider la création du nouveau client ?"
+												icon="ui-icon-alert" />
+										</p:commandButton>
+
+										<!-- rajouter/vérifier l'id du conseiller en paramètre de la methode createCustomer() -->
+										<p:confirmDialog global="true" showEffect="fade"
+											hideEffect="fade">
+											<p:commandButton value="Oui"
+												styleClass="ui-confirmdialog-yes" icon="ui-icon-check"
+												action="#" />
+											<p:commandButton value="Non" type="button"
+												styleClass="ui-confirmdialog-no" icon="ui-icon-close" />
+										</p:confirmDialog>
+
+										<p:commandButton value="Oui" styleClass="ui-confirmdialog-yes"
+											icon="ui-icon-check"
+											action="#" />
+										<p:button outcome="" value="Annuler" />
+
+									</p:column>
+								</p:row>
+							</f:facet>
+						</p:panelGrid>
+					</h:form>
+				</div>
+			</ui:define>
+		</ui:composition>
+	</f:view>
+
+</h:body>
+</html>
